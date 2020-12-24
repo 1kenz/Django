@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="K:\02 - clarusway\00-Coding\django\lesson_02\env"
+VIRTUAL_ENV="K:\02 - clarusway\00-Coding\django\django-lessons\lesson_02\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

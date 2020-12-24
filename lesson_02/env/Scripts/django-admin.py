@@ -1,4 +1,4 @@
-#!k:\02 - clarusway\00-coding\django\lesson_02\env\scripts\python.exe
+#!k:\02 - clarusway\00-coding\django\django-lessons\lesson_02\env\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
