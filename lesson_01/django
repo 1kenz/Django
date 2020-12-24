@@ -1,0 +1,50 @@
+// django
+
+$ python -m pip install --upgrade pip
+
+$ py -m venv env
+
+$ .\env\Scripts\activate
+
+$ pip install django
+
+$ pip freeze
+
+$ pip freeze > requirement.exe
+
+$ django-admin startproject clarusway
+
+$ cd clarusway
+
+$ py manage.py startapp fscohort
+
+$ py manage.py runserver // server ı çalıştırma // sonuna çalışmasını istediğimiz portu yazabiliyoruz
+
+$ py manage.py migrate
+
+$ py manage.py createsuperuser
+
+$ py manage.py check // ile hataları da kontrol edebiliriz
+
+
+MVT // MODEL-VIEW-TEMPLATE
+
+
+
+
+$ pip freeze > .\requirement.txt
+
+
+
+//MAC
+İnstall --upgrade pip
+
+python3.9 -m pip install --upgrade pip
+
+py -m venv clsenv
+.\clsenv\Scripts\activate
+pip install django
+pip freeze
+pip freeze >.\requirement.txt    (update)
+django-admin startproject clarusway(proje adi)
+
