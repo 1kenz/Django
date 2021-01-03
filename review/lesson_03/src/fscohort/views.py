@@ -1,9 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def home_view(request):
-    return HttpResponse("Hello from HOME Page !!!")
+    
+    context = {
+        "title" : "clarusway",
+        "dict_1" : {"django" : "best framework"},
+        "my_list" : [2,3,5,6] 
+    }
+    return render(request, "fscohort/home.html", context)
 
-def about(request):
-    return HttpResponse("Hello from ABOUT Page")
+# def about(request):
+#     return render(request, "about.html", context)
