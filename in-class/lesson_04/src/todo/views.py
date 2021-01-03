@@ -22,7 +22,7 @@ def todo_create(request):
         form = TodoAddForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("house")
+            return redirect("todo-list")
     context = {
         'form': form
     }
