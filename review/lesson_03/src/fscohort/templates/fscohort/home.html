@@ -7,9 +7,12 @@
 </head>
 <body>
     <h1>Hello, This is Home page</h1>
-    <form action="https://www.google.com/search", method="GET" />
+    <form action="." method="GET">
+        {{ form }}
+    </form>
+    <!-- <form action="https://www.google.com/search", method="GET" />
 			<input type="text", name="q", placeholder="Title">
-			<input type="submit", value="Search"><br>
+			<input type="submit", value="Search"><br> -->
     {{ title |add:" is the best" }} <br>
     {{ title |safe }} <br>
     {{ dict_1 }} <br>
