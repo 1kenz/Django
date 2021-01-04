@@ -4,7 +4,7 @@ from django.shortcuts import render
 def home_view(request):
     
     context = {
-        "title" : "clarusway",
+        "title" : "<b>clarusway</b>",
         "dict_1" : {"django" : "best framework"},
         "my_list" : [2,3,5,6] 
     }

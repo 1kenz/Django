@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>Hello, This is Home page</h1>
-    {{ title }} <br>
+    <form action="https://www.google.com/search", method="GET" />
+			<input type="text", name="q", placeholder="Title">
+			<input type="submit", value="Search"><br>
+    {{ title |add:" is the best" }} <br>
+    {{ title |safe }} <br>
     {{ dict_1 }} <br>
 
     {% for i in my_list %} 
