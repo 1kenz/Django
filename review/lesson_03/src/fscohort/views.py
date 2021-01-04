@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import StudentForm
 from .models import Student
 
@@ -25,3 +25,24 @@ def student_list(request):
         "students" : students
     }
     return render(request, "fscohort/student_list.html", context)
+
+def student_add(request):
+    form = StudentForm()
+    
+    if request.method == "POST":
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("list")
+            
+    context = {
+        "form": form,
+    }
+    return render(request,"fscohort/student_add.html", context)
+
+def student_detail(request, id):
+    student = Student.objects.get(id=id)
+    context = {
+        "student" : student
+    }
+    return render(request, "fscohort/student_detail.html", context)
