@@ -29,7 +29,8 @@ def post_create(request):
 
 
 def post_detail(request, slug):
-    obj = get_object_or_404(Post, slug=slug)
+    # Post.objects.get(slug=learn-drf-3c78be2186)
+    obj = get_object_or_404(Post, slug=slug)  # slug = learn-drf-3c78be2186
     context = {
         "object": obj
     }
@@ -42,9 +43,9 @@ def post_update(request, slug):
     if form.is_valid():
         form.save()
         return redirect("blog:list")
+
     context = {
         "object": obj,
-        "form": form,    
+        "form": form
     }
-    return render(request,"blog:post_update", context)
-    
+    return render(request, "blog/post_update.html", context)

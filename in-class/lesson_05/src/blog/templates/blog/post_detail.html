@@ -2,10 +2,9 @@
 
 
 {% block content %}
-    {% for object in object_list %}
-    <a href="{% url 'blog:detail' object.slug %}"></a>
-    <h1>{{object.title}}</h1>
-    <img src="{{ object.image.url }}" alt="">
-    <p>{{object.content|truncatechars:20}}</p>
+
+<h1>{{object.title}}</h1>
+<img src="{{ object.image.url }}" alt="">
+<p>{{object.content}}</p>
+
 {% endblock content %}
-    
