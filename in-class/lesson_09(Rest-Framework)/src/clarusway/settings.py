@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = 'nhce80)ns1(4h$h3)a%^(@&fu=gk9bm9%c!4j7i6344nfklnzi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fscohort',
-    'fscohort_api'
+    'fscohort_api',
     # 'fscohort.apps.FscohortConfig'
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
