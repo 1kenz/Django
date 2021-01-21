@@ -1,17 +1,23 @@
-from django.core import serializers
 from django.shortcuts import get_object_or_404, render
-from django.http import JsonResponse, request
+from django.http import JsonResponse
+
+from django.core import serializers
 from django.core.serializers import serialize
 import json
+
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.views import APIView
+from .serializers import StudentSerializer
+
 from fscohort.models import Student
+
+from rest_framework.views import APIView  # REST FRAMEWORK
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializers import StudentSerializer
 from rest_framework import status
-from rest_framework import generics
-from rest_framework import mixins
+
+from rest_framework import generics  # GENERICS
+
+from rest_framework import mixins  # MIXINS
 
 
 def home_api(request):
@@ -22,7 +28,7 @@ def home_api(request):
     }
     return JsonResponse(data)
 
-
+#! FUNCTIONS
 # def student_list_api(request):
 #     if request.method == "GET":
 #         students = Student.objects.all()
@@ -124,6 +130,7 @@ def home_api(request):
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+#! CLASS
 # class StudentList(APIView):
 
 #     def get(self, request):
@@ -170,6 +177,7 @@ def home_api(request):
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+#! GENERICS
 # class StudentList(generics.ListCreateAPIView):
 #     serializer_class = StudentSerializer
 #     queryset = Student.objects.all()
@@ -181,6 +189,7 @@ def home_api(request):
 #     lookup_field = "id"
 
 
+#! MIXINS 
 class Student(generics.GenericAPIView, mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin, mixins.RetrieveModelMixin):
 
     serializer_class = StudentSerializer
